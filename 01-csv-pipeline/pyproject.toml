@@ -1,0 +1,17 @@
+[project]
+name = "my_dagster_csv"
+version = "0.1.0"
+dependencies = ["dagster>=1.7,<2", "pandas"]
+
+[tool.dagster]
+module_name = "my_dagster_csv"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

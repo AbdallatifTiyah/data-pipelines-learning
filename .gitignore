@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Dagster/dbt outputs
+logs/
+target/
+.dbt/
+
+# Generated data outputs
+**/data/*.csv
+**/data/*.parquet
+**/data/*.json
+!01-csv-pipeline/data/raw.csv
