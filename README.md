@@ -13,14 +13,16 @@ This project introduces Dagster concepts: **Assets**, **Dependencies**, and the 
 
 ## 🗂️ Project Structure
 
+```bash
 01-csv-pipeline/
 ├─ data/
-│ └─ raw.csv # Sample input CSV
+│  └─ raw.csv              # Sample input CSV
 ├─ src/
-│ └─ my_dagster_csv/
-│ ├─ init.py
-│ └─ assets.py # Dagster assets code
+│  └─ my_dagster_csv/
+│     ├─ __init__.py
+│     └─ assets.py         # Dagster assets code
 └─ pyproject.toml
+```
 
 
 ---
