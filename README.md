@@ -1,6 +1,6 @@
 # 01 - CSV Pipeline (Dagster)
 
-![CSV Pipeline](../A_flowchart-style_digital_diagram_illustrates_a_CS.png)
+![CSV Pipeline](../01-csv-pipeline.png)
 
 A simple **Dagster** project to demonstrate basic asset-based pipelines:
 - Load a CSV file.
