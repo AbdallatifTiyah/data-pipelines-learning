@@ -41,7 +41,7 @@ dagster dev
 
 Then open http://127.0.0.1:3000
  and Materialize write_clean_csv.
-
+```
 🧠 Key Learnings
   - Understand Dagster asset definitions and dependencies.
   - Build a reproducible pipeline with clear data flow.
