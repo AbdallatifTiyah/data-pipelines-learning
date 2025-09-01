@@ -1,0 +1,9 @@
+| Stage                    | Est. Time      |
+| ------------------------ | -------------- |
+| Stage 1: CSV             | ✅ Done        |
+| Stage 2: API             | 1–2 days       |
+| Stage 3: PostgreSQL      | 2–3 days       |
+| Stage 4: Combined        | 2 days         |
+| Stage 5: dbt Integration | 3–4 days       |
+| Stage 6: Dockerize       | 3–5 days       |
+| Stage 7: Real Project    | Continuous use |

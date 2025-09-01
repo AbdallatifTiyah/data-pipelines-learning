@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-api-pipeline"
+version = "0.1.0"
+description = "Step 2: Dagster API pipeline (partitioned) writing JSON/CSV/Parquet"
+requires-python = ">=3.10"
+dependencies = [
+  "dagster>=1.8.0",
+  "dagster-webserver>=1.8.0",
+  "python-dotenv>=1.0.1",
+  "requests>=2.31.0",
+  "pandas>=2.2.0",
+  "pyarrow>=15.0.0"   # for Parquet
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,24 @@
+# from inside 02-api-pipeline/
+python -m venv .venv
+. .venv/Scripts/activate    # Windows
+# source .venv/bin/activate # macOS/Linux
+
+pip install -e .
+
+# Launch Dagster UI
+dagster dev -m my_api_pipeline
+
+
+
+# CLI (run a specific partition):
+dagster asset materialize -m my_api_pipeline --select api_to_files --partition 2025-08-31
+
+🧠 New Dagster concepts (just what you need now)
+
+Daily partitions: run assets per day; enables backfills and reproducibility.
+
+Asset job: a named selection (we pick the sink asset; Dagster resolves upstream).
+
+Schedule: cron + timezone (Asia/Hebron) to automate daily runs.
+
+MaterializeResult metadata: paths, row counts, etc., visible in the UI.
