@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-pg-pipeline"
+version = "0.1.0"
+description = "Step 3: CSV → Postgres raw schema with Dagster"
+requires-python = ">=3.10"
+dependencies = [
+  "dagster>=1.8.0",
+  "dagster-webserver>=1.8.0",
+  "python-dotenv>=1.0.1",
+  "pandas>=2.2.0",
+  "SQLAlchemy>=2.0.29",
+  "psycopg2-binary>=2.9.9"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

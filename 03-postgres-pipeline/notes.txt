@@ -1,0 +1,35 @@
+How to run
+# from inside 03-postgres-pipeline/
+python -m venv .venv
+. .venv/Scripts/activate    # Windows
+# source .venv/bin/activate # macOS/Linux
+
+pip install -e .
+
+# Start Postgres (if not running)
+docker compose up -d
+
+# Launch Dagster UI
+dagster dev -m my_pg_pipeline
+
+
+In the UI:
+
+Select csv_to_postgres → Materialize.
+
+Check Postgres: table raw.people should exist with your rows.
+
+✅ Acceptance checklist
+
+ docker compose ps shows Postgres healthy.
+ Dagster UI runs and the job csv_to_pg_job succeeds.
+ Table raw.people exists and has data.
+ Re-running appends more rows (raw zone snapshot behavior).
+(In Step 5 with dbt, we’ll handle dedup/typing/keys via staging models.)
+
+🧠 New concepts you’re learning here
+
+Warehouse landing zone: write source data into raw schema (append-only).
+Connection mgmt: build a SQLAlchemy engine from env vars; ensure schema.
+Load strategy: to_sql(... if_exists="append") for raw; transformations later in dbt.
+Job & schedule: DB work automated on a cadence.
